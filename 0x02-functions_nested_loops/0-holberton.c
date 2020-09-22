@@ -8,7 +8,7 @@
 
 int main(void)
 {
-char school[10] = "Holberton";
+char *school = "Holberton";
 int i = 0;
 
 for (i = 0; i <= 9; i++)
