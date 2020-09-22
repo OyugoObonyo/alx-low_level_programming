@@ -1,19 +1,20 @@
 #include "holberton.h"
 
 /**
-*main - print Holberton
-*
-*Return: Always 0
-*/
+ * main - Printing the word Holberton
+ *
+ * Return: Always 0 (success)
+ *
+ */
 
 int main(void)
 {
-char *school = "Holberton";
-int i = 0;
+char *school_name = "Holberton";
+int letters = 0;
 
-for (i = 0; i <= 9; i++)
+for (letters = 0; letters <= 9; letters++)
 {
-_putchar(school[i]);
+_putchar(school_name[letters]);
 }
 _putchar('\n');
 
