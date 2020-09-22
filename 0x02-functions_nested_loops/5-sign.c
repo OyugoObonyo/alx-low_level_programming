@@ -3,7 +3,7 @@
 /**
  *print_sign - Prints sign of a number
  *@n:number entered
- *Return: (1) if n>0: (0) if n=0:(-1) if n<0
+ *Return:1-if n is greater than zero: 0 if n equals 0:-1-if n is less than 0
  */
 
 int print_sign(int n)
@@ -19,7 +19,7 @@ _putchar('0');
 return (0);
 else
 {
-_putchar('n')
+_putchar('-')
 }
 _putchar('\n')
 }
