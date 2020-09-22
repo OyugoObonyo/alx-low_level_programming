@@ -4,8 +4,7 @@
 *main - print Holberton
 *
 *Return: Always 0
-*
-**/
+*/
 
 int main(void)
 {
