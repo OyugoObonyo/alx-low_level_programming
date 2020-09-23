@@ -16,7 +16,7 @@ last = (x % 10) * -1;
 }
 else
 {
-last = x % 10
+last = x % 10;
 }
 _putchar (last + '0');
 return (last);
