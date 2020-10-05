@@ -1,0 +1,14 @@
+#include "holberton.h"
+
+/*
+*_memset-Fills a byte with constant bytes
+*@s:parameter 1
+*@b:parameter 2
+*@n:parameter 3
+*
+*Return: pointer to memory area s
+
+char *_memset(char *s, char b, unsigned int n)
+{
+unsigned int i;
+char *str=
