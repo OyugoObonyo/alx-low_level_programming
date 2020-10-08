@@ -4,7 +4,6 @@
  *Sqrt-helper function
  *@n:parameter 1
  *@i:parameter 2
- *
  *Return:square root of a number
  */
 
