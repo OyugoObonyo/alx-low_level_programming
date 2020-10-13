@@ -1,44 +1,37 @@
-#include "holberton.h"
 #include <stdlib.h>
-
+#include <stdio.h>
+#include "holberton.h"
 /**
- * alloc_grid - returns a pointer to a 2 dimensional array of integers
- * @width: width of array
- * @height: height of array
- * Return: double pointer to multi-dimen array
+ * alloc_grid -  pointer to a 2 dimensional array of integers
+ * @width: first parameter
+ * @height: second parameter
+ *
+ * Description:  pointer to a 2 dimensional array of integers
+ * Return: Always(0) Success
  */
 int **alloc_grid(int width, int height)
 {
-	int **grid, r, c, **_grid;
+	int **array;
+	int i;
 
 	if (width <= 0 || height <= 0)
-	{
 		return (NULL);
+
+
+	array = (int **) malloc(height * sizeof(int *));
+
+
+	if (array == NULL)
+		return (NULL);
+
+
+	for (i = 0; i < height; i++)
+	{
+		array[i] = malloc(width * sizeof(int));
 	}
 
-	grid = malloc(sizeof(int *) * height);
-	/*if memory is insifficuent*/
-	if (!grid)
+	if (array != NULL)
+		return (array);
+	else
 		return (NULL);
-	_grid = grid;
-
-	c = 0;
-	while (c < height)
-	{
-		*(_grid + c) = malloc(width * sizeof(int));
-
-		if (!(*(_grid + c)))
-			return (NULL);
-
-		r = 0;
-		while (r < width)
-		{
-			*(*(_grid + c) + r) = 0;
-			r++;
-
-		}
-		c++;
-	}
-
-	return (grid);
 }
