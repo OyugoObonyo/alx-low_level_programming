@@ -1,0 +1,10 @@
+#include "holberton.h"
+
+/**
+ * print_alphabet - prints alphabet in lowercase with new line
+ *
+ */
+
+void print_alphabet(void)
+{
+
