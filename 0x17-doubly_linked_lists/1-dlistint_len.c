@@ -1,23 +1,21 @@
 #include "lists.h"
+
 /**
- * dlistint_len - return length of LL
- * @h: Head of the LL
- * Return: Length of LL
+ * dlistint_len - Entry Point
+ * @h: head node of linked list
+ * Description: Counts the number of elements in a linked list)?
+ * Return: number of elements
  */
+
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t count = 0;
-
-	if (h == NULL)
-	{
-		return (0);
-	}
+	size_t counter = 0;
 
 	while (h != NULL)
 	{
-		count++;
+		counter++;
 		h = h->next;
 	}
 
-	return (count);
+	return (counter);
 }
