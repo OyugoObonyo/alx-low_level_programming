@@ -1,4 +1,5 @@
 #include "search_algos.h"
+#include <stdio.h>
 
 /**
  * print_array - prints the contents inside the array
@@ -27,35 +28,50 @@ void print_array(int *array, size_t l, size_t r)
 }
 
 
+
+
 /**
- *binary_search - finds an element in an array using binary search
- *@array: array to be traversed
- *@size: size of the array
- *@value: element to be searched
- *Return: Element's array index if successful and -1 if not
+ * binary_S - binary search algorithm
+ * @array: the array to print
+ * @l: start point
+ * @r: end point
+ * @value: value to search
+ * Return: index position
+ */
+
+
+
+
+int binary_S(int *array, size_t l, size_t r, int value)
+{
+	int mid = l + (r - l) / 2;
+
+	print_array(array, l, r);
+	if (r >= l)
+	{
+		if (array[mid] == value)
+			return (mid);
+		else if (value < array[mid])
+			return (binary_S(array, l, mid - 1, value));
+		else if (value > array[mid])
+			return (binary_S(array, mid + 1, r, value));
+	}
+	return (-1);
+}
+
+
+
+/**
+ * binary_search - binary search algorithm
+ * @array: the array to print
+ * @size: size of array
+ * @value: value to search
+ * Return: index position
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t left = 0;
-	size_t right = size - 1;
-	int middle;
+	if (array == NULL)
+		return (-1);
 
-	while (left <= right)
-	{
-		middle = (left + right) / 2;
-		print_array(array, left, right);
-		if (value == array[middle])
-		{
-			return (middle);
-		}
-		else if (value < array[middle])
-		{
-			right = middle - 1;
-		}
-		else
-		{
-			left = middle + 1;
-		}
-	}
-	return (-1);
+	return (binary_S(array, 0, size - 1, value));
 }
